@@ -79,8 +79,7 @@ $$\sigma_j = J_j \cdot \frac{A_j}{T} \geq 0$$
 │   ├── physics.py          # Ricci-Dissipation PDE Solver
 │   └── topology.py         # GUDHI-based Betti number audit
 ├── data/
-│   ├── raw/                # Placeholder for MetaboLights .tsv files
-│   └── processed/          # Cleaned data and GTS result tables
+│   └── MTBLS39 and MTBLS1  # Data used in this research
 ├── docs/
 │   └── abstract.md         # Full theoretical abstract
 ├── LICENSE
