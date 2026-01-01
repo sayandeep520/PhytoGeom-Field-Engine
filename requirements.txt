@@ -1,11 +1,8 @@
-POT
-GraphRicciCurvature
-networkx
+streamlit
 pandas
-numpy
-matplotlib
-seaborn
+numpy<2.0.0
+networkx
+plotly
 scipy
-gudhi
-
-print("✅ requirements.txt generated successfully!")
+POT>=0.9.0
+GraphRicciCurvature
