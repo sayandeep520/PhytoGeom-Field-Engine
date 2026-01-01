@@ -2,6 +2,7 @@ streamlit
 pandas
 numpy<2.0.0
 networkx
+matplotlib
 plotly
 scipy
 POT>=0.9.0
