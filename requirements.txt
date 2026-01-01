@@ -1,0 +1,11 @@
+POT
+GraphRicciCurvature
+networkx
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+gudhi
+
+print("✅ requirements.txt generated successfully!")
