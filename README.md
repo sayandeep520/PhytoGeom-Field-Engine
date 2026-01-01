@@ -46,12 +46,15 @@ PhytoGeom-Field-Engine/
 │   ├── Fig2_Geometric_Phase_Space.png
 │   ├── Fig3_Field_Equation_Validation.png
 │   ├── Fig4_Metabolic_Discovery_Spectrum.png
-│   └── Fig5_Veraison_Geometric_Shockwave.png
+│   ├── Fig5_Veraison_Geometric_Shockwave.png
 │   └── geometric_shockwaves.csv
 │
-├── phytogeom.py             # Standalone CLI Application
+├── app.py                   # THE WEB APP (Streamlit Dashboard)
+├── phytogeom.py             # THE TERMINAL TOOL (CLI Application)
+├── packages.txt             # System Compilers (Required for Streamlit Cloud)
 ├── requirements.txt         # Python Dependencies
-└── README.md                # Documentation
+├── .gitignore               # Files to exclude (e.g., __pycache__)
+└── README.md                # Documentation & Instructions
 
 ```
 
