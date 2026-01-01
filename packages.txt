@@ -1,0 +1,4 @@
+cmake
+gfortran
+libopenblas-dev
+liblapack-dev
