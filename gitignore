@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments
+virt/
+virtualenv/
+env/
+.env/
+venv/
+
+# Jupyter/Colab
+.ipynb_checkpoints
+*.gih
+colab_config.py
+local_connection_to_jupyter_server.json
+ngrok.log
+ngrok.log.err
+
+# Data
+*.csv
+*.tsv
+*.dat
+*.pkl
+*.json
+*.yaml
+*.hdf5
+*.parquet
+data/
+
+# Output/Results
+output/
+results/
+figures/
+plots/
+*.log
+*.txt
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# IDEs and other tools
+.vscode/
+.idea/
+*.DS_Store
+
+# Specific to this project (if these are generated and not source)
+Metabolic_Geometrodynamics_Report.pdf
+ricci_dissipation_field_flow.png
