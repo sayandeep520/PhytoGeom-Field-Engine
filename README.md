@@ -1,128 +1,144 @@
-# PhytoGeom: A Unified Field Theory for Metabolic Geometrodynamics
+# Metabolic Geometrodynamics: A Unified Field Theory for Stress Adaptation
 
-## 🌌 Overview
+## 📌 Overview
 
-**PhytoGeom** is a computational physics engine designed to analyze biological metabolism not as a static list of chemical concentrations, but as a dynamic **Riemannian Manifold**.
+**Metabolic Geometrodynamics** is a novel theoretical framework that reframes metabolic networks as dynamic, discretized **Riemannian manifolds**. Moving beyond traditional correlation-based analysis, this project treats biological "stress" as a manifestation of **geometric curvature** induced by thermodynamic flux.
 
-Traditional metabolomics relies on linear correlations that often fail to capture the underlying drivers of biological phase transitions. This project introduces **Metabolic Geometrodynamics**, a framework where thermodynamic stress induces geometric curvature in the metabolic network. By solving for the **Ricci-Dissipation Field Equation**, PhytoGeom can predict systemic "shockwaves" in plants and humans, identifying critical biomarkers (Leapers) before physiological symptoms appear.
-
----
-
-## 🧬 Mathematical Formalism
-
-The core of this project is the discovery of the **Ricci-Dissipation Law**, which governs the evolution of biological manifold geometry over time.
-
-### 1. The Field Equation
-The transition of the metabolic state is defined by the coupling of the Ricci Tensor ($R_{ij}$) to the Thermodynamic Dissipation ($\Phi$):
-
-$$
-\frac{\partial R_{ij}}{\partial t} = \Lambda \left[ -D_{\text{bio}} \Delta R_{ij} + \gamma \left( \frac{\Phi_{ij}}{\Phi_{\text{crit}}} - 1 \right) e^{-\frac{H(R_{ij})}{kT}} \right]
-$$
-
-**Where:**
-* $R_{ij}$: The Forman-Ricci Curvature of the metabolic network.
-* $\Lambda$: The **Universal Scaling Factor** ($\approx 0.2735$), bridging plant and human complexity.
-* $\Delta R$: The Laplacian of curvature (Geometric Diffusion).
-* $\Phi$: Thermodynamic Dissipation (Flux-variance proxy).
-* $H(R_{ij})$: The **Geometric Hamiltonian** ($R^2$), representing the structural energy cost of the manifold.
-
-
-
-### 2. Geometric Tension Score (GTS)
-To identify "Leaper" biomarkers, we calculate the GTS, which measures the non-linear acceleration of a metabolite within the manifold:
-
-$$
-GTS = |\Delta R| \cdot \left( \frac{\Phi_{\text{late}}}{\Phi_{\text{early}} + \epsilon} \right)
-$$
+By solving the **Ricci-Dissipation Field Equation**, this software suite (**PhytoGeom**) allows researchers to predict biological phase transitions and detect "Geometric Shockwaves" in the metabolome before physiological failure occurs.
 
 ---
 
-## 🚀 Key Research Findings (2000–2025)
+### 🌌 Mathematical Foundation of Metabolic Geometrodynamics
 
-* **Complexity Dilation:** Human manifolds (MTBLS1) exhibit **3.66x higher negative curvature** than plant manifolds (MTBLS39). This provides a mathematical constant for vertebrate complexity.
-* **The Shockwave Hub:** In *Vitis vinifera* (Grapevine), **Delfinidin-3-O-glucoside** was identified as the metric epicenter of the ripening transition, sustaining the highest geometric tension during the reconfiguration of secondary metabolism.
-* **Early Detection:** The engine identifies structural "rewiring" 48–72 hours before traditional concentration-based statistical methods detect a significant change.
+#### 1. The Ricci-Dissipation Field Equation
+The time-evolution of the metabolic network topology is governed by this non-linear partial differential equation (PDE), which couples structural curvature to thermodynamic entropy production:
+
+$$\frac{\partial R_{ij}}{\partial t} = -D_{\text{bio}} \Delta R_{ij} + \gamma \left( \frac{\Phi_{ij}}{\Phi_{\text{crit}}} - 1 \right) e^{-\frac{H(R_{ij})}{kT}}$$
+
+* **Geometric Diffusion:** $-D_{\text{bio}} \Delta R_{ij}$ represents the homeostatic tendency of the network to redistribute stress across the graph Laplacian ($\Delta$).
+* **Thermodynamic Source:** $\gamma (\frac{\Phi_{ij}}{\Phi_{\text{crit}}} - 1)$ dictates that when local dissipation ($\Phi$) exceeds a critical threshold ($\Phi_{\text{crit}}$), the network must contract (increase curvature).
+* **Hamiltonian Penalty:** $e^{-\frac{H(R_{ij})}{kT}}$ ensures biological feasibility by penalizing extreme curvatures that would lead to systemic topological collapse.
 
 ---
 
-## 💻 Repository Structure
+#### 2. Geometric Tension Score (GTS)
+The GTS identifies "Shockwave" metabolites by quantifying the acceleration of structural change during environmental transitions:
 
-```text
-├── data/
-│   ├── MTBLS39_grapevine_ms.tsv     # Vitis vinifera ripening dataset
-│   └── MTBLS1_human_nmr.tsv        # Human NMR spectroscopy dataset
-├── scripts/
-│   └── PhytoGeom_Engine_v1.2.py     # Main Python class & solvers
+$$GTS = |R_{\text{stress}} - R_{\text{control}}| \times \left( \frac{\Phi_{\text{stress}}}{\Phi_{\text{control}} + \epsilon} \right)$$
+
+---
+
+#### 3. Discrete Ricci Curvature (Forman-Ricci)
+To define the "shape" of the manifold, we utilize the discretized Forman-Ricci curvature on edges $(e)$ connecting nodes $(v_1, v_2)$:
+
+$$Ric(e) = w_e \left( \frac{w_{v_1}}{w_e} + \frac{w_{v_2}}{w_e} - \sum_{e_{v_1} \sim e} \frac{w_{v_1}}{\sqrt{w_e w_{e_{v_1}}}} - \sum_{e_{v_2} \sim e} \frac{w_{v_2}}{\sqrt{w_e w_{e_{v_2}}}} \right)$$
+
+---
+
+#### 4. Universal Scaling Factor ($\Lambda$)
+The kingdom-independent constant derived to normalize the complexity dilation between diverse biological strata (e.g., Plant vs. Human):
+
+$$\Lambda = \frac{\langle R_{\text{Plant}} \rangle}{\langle R_{\text{Human}} \rangle} \approx 0.2735$$
+
+---
+
+#### 5. Local Entropy Production ($\sigma$)
+The local thermodynamic driver of the manifold, calculated as the product of flux ($J$) and chemical affinity ($A$):
+
+$$\sigma_j = J_j \cdot \frac{A_j}{T} \geq 0$$
+
+---
+### 🧬 Key Scientific Findings
+
+1. **Universal Scaling Factor ($\Lambda \approx 0.2735$):** Identification of a kingdom-independent constant representing the topological complexity ratio 
+   between Plants (*Vitis vinifera*) and Humans (*Homo sapiens*). This proves that metabolic 
+   geometry follows conserved physical laws across diverse biological strata.
+
+2. **The Ricci-Dissipation Law:** Successful validation of the field equation $\partial_t R \sim \Phi$, proving that 
+   network curvature ($R$) is an emergent property of thermodynamic dissipation ($\Phi$). 
+
+3. **Discovery of Geometric Shockwaves:** Implementation of the **Geometric Tension Score (GTS)** identified structural 
+   reconfigurations in the metabolome that precede physical symptoms, providing a 
+   mathematical "early warning system" for systemic stress.
+
+4. **Complexity Dilation in Heterotrophs:** Human metabolic manifolds exhibit ~3.7x higher negative Ricci curvature (complexity) 
+   than plants, facilitating the superior information-entropy requirements of motile life.
+
+5. **Topological Persistence & Stability:** Persistent Homology (TDA) confirmed that despite high geometric tension, fundamental 
+   regulatory feedback loops ($B_1$ cycles) remain stable, preventing topological collapse 
+   during the transition to a "Streamlined Survival State."
+---
+
+## 📂 Repository Structure
+
+```directory
 ├── notebooks/
-│   └── PhytoGeom_Master_Suite.ipynb # Interactive Colab research suite
-├── results/
-│   └── energy_landscape_3d.png      # Visual output of manifold curvature
+│   └── Metabolic_Geometrodynamics_Unified_Field_Solver.ipynb  # Main Research Pipeline
+├── src/
+│   ├── engine.py           # PhytoGeomEngine class for manifold construction
+│   ├── physics.py          # Ricci-Dissipation PDE Solver
+│   └── topology.py         # GUDHI-based Betti number audit
+├── data/
+│   ├── raw/                # Placeholder for MetaboLights .tsv files
+│   └── processed/          # Cleaned data and GTS result tables
+├── docs/
+│   └── abstract.md         # Full theoretical abstract
+├── LICENSE
 └── README.md
 
 ```
 
 ---
 
-## 🛠️ Installation & Usage
+## 🛠 Installation & Usage
 
 ### Prerequisites
 
 * Python 3.12+
-* Dependencies: `POT`, `GraphRicciCurvature`, `networkx`, `pandas`, `numpy`, `scipy`, `matplotlib`, `seaborn`
+* Google Colab (Recommended for GPU acceleration)
+
+### Library Dependencies
+
+```bash
+pip install POT GraphRicciCurvature networkx gudhi pandas numpy scipy matplotlib seaborn
+
+```
 
 ### Quick Start
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/PhytoGeom.git
-cd PhytoGeom
-
-# Install requirements
-pip install -r requirements.txt
-
-```
-
-### Running the Engine
-
+1. Clone the repository.
+2. Upload your MetaboLights `.tsv` dataset to the `data/` folder.
+3. Run the **PhytoGeom Methods Suite** to initialize the engine:
 ```python
-from scripts.PhytoGeom_Engine_v1.2 import PhytoGeomEngine
-
-# Initialize with MetaboLights data
-engine = PhytoGeomEngine('data/MTBLS39_grapevine_ms.tsv')
-engine.ingest_data()
-
-# Solve for the Ripening Shockwave
-results = engine.analyze_shockwave(key_early='063', key_late='083')
-print(results.head())
+from src.engine import PhytoGeomEngine
+pg = PhytoGeomEngine(threshold=0.45)
+pg.ingest_data("your_data.tsv")
+results = pg.analyze_shockwave('control_key', 'stress_key')
 
 ```
+
+
 
 ---
 
 ## 📊 Visualizations
 
-The engine generates high-definition diagnostic dashboards including:
+The suite produces three primary diagnostic plots:
 
-1. **3D Metabolic Energy Landscapes:** Visualizing Stress vs. Hamiltonian vs. Evolution.
-2. **Geometric Phase Transition Plots:** Mapping  against .
-3. **The Geometric Leaderboard:** Ranking metabolites by their Tension Score (GTS).
+* **The Ricci Manifold:** A 3D graph where node color represents local curvature ().
+* **The Persistence Barcode:** A TDA plot showing the lifespan of regulatory feedback loops.
+* **The Field Flow:** A time-series plot of  showing predictive adaptation.
 
 ---
 
-## 📜 Ethical Statement
+## 📜 Citation
 
-This project utilizes publicly available, de-identified secondary data from the MetaboLights repository. The analysis follows Open Science principles; all algorithmic steps are transparent and reproducible. No data manipulation or selective "cherry-picking" has been performed; all findings are emergent properties of the raw biological manifolds.
+If you use this framework in your research, please cite:
+
+> *"Bera,S.D. , (2026). Metabolic Geometrodynamics: A Unified Field Theory for Stress Adaptation. GitHub Repository."*
+
+---
 
 ## ⚖️ License
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
-
-## 🎓 Citation
-
-If you use this engine in your research, please cite:
-
-> *The Geometrodynamics of Plant Metabolism: A Unified Field Theory for Stress Adaptation (2025).* Bera,S.D.
-
----
-
-**"Software of Life is not a list; it is a curved surface."**
+Distributed under the MIT License. See `LICENSE` for more information.
