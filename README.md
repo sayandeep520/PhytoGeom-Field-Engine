@@ -74,7 +74,7 @@ $$\sigma_j = J_j \cdot \frac{A_j}{T} \geq 0$$
 ```directory
 ├── notebooks/
 │   └── Metabolic_Geometrodynamics_Unified_Field_Solver.ipynb  # Main Research Pipeline
-├── src/
+├── scripts/
 │   ├── engine.py           # PhytoGeomEngine class for manifold construction
 │   ├── physics.py          # Ricci-Dissipation PDE Solver
 │   └── topology.py         # GUDHI-based Betti number audit
